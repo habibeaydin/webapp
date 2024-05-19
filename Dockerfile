@@ -1,8 +1,3 @@
-FROM openjdk:17-alpine AS builder
-COPY . .
-WORKDIR .
-RUN ./gradlew bootJar
-
 FROM openjdk:17-alpine
 WORKDIR .
 COPY build/libs/*.jar app.jar
